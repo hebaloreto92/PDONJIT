@@ -5,7 +5,7 @@ $password = "Se1MxHdZr";
 $conn = NULL;
 try 
 {
-    $conn = new PDO("mysql:host=$hostname;dbname=sk2545",$username, $password);
+    $conn = new PDO("mysql:host=$hostname;dbname=hs563",$username, $password);
 	echo "<b>Connected successfully</b>"."<br>";
 	}
 	catch(PDOException $e)
