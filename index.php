@@ -1,11 +1,11 @@
 <?php
-$hostname = "sql2.njit.edu";
+$domainname = "sql2.njit.edu";
 $username = "hs563";
 $password = "Se1MxHdZr";
 $conn = NULL;
 try 
 {
-    $conn = new PDO("mysql:host=$hostname;dbname=hs563",$username, $password);
+    $conn = new PDO("mysql:host=$domainname;dbname=hs563",$username, $password);
 	echo "<b>Connected successfully</b>"."<br>";
 	}
 	catch(PDOException $e)
