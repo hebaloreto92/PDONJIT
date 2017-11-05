@@ -1,5 +1,5 @@
 <?php
-$hostname = "sql1.njit.edu";
+$hostname = "sql2.njit.edu";
 $username = "hs563";
 $password = "25QWErty";
 $conn = NULL;
