@@ -1,11 +1,11 @@
 <?php
-$domainname = "sql2.njit.edu";
-$username = "hs563";
-$password = "Se1MxHdZr";
+$hostname = "sql2.njit.edu";
+$username = "sk2545";
+$password = "gkMQzyEKO";
 $conn = NULL;
 try 
 {
-    $conn = new PDO("mysql:host=$domainname;dbname=hs563",$username, $password);
+    $conn = new PDO("mysql:host=$hostname;dbname=sk2545",$username, $password);
 	echo "<b>Connected successfully</b>"."<br>";
 	}
 	catch(PDOException $e)
@@ -30,11 +30,9 @@ $sql = "select * from accounts where id<6 ";
 $results = runQuery($sql);
 if(count($results) > 0)
 {
+	echo "<b>Results returned = ".count($results)."</b></br>";
 	echo "<table border=\"1\"><tr><th>Id</th><th>Email</th><th>Firstname</th><th>Lastname</th><th>Phone</th><th>Birthday</th><th>Gender</th><th>Password</th></tr>";
-	foreach ($results as $row) {
-	echo
-	"<br>".$row["id"].$row["email"].$row["fname"].$row["lname"].$row["phone"].$row["birthday"].$row["gender"].$row["password"]."<br>";
-		
+	foreach ($results as $row) {	
 	echo "<br>"."<tr><td>".$row["id"]."</td><td>".$row["email"]."</td><td>".$row["fname"]."</td><td>".$row["lname"]."</td><td>".$row["phone"]."</td><td>".$row["birthday"]."</td><td>".$row["gender"]."</td><td>".$row["password"]."</td></tr>";
 	}
 	}
